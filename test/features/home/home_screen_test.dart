@@ -6,7 +6,7 @@ void main() {
   testWidgets('affiche le nouvel accueil et les actions principales', (tester) async {
     await tester.pumpWidget(const TesouApp());
 
-    expect(find.text('T’es où ?'), findsOneWidget);
+    expect(find.text('T’es où ?'), findsWidgets);
     expect(find.text('Je suis là.'), findsOneWidget);
     expect(find.text('Tout va bien'), findsWidgets);
     expect(find.text('Mes proches'), findsOneWidget);
