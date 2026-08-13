@@ -7,7 +7,7 @@ Future<void> main() async {
 
   await Supabase.initialize(
     url: 'https://pupsvkzbanpfnwssjvfq.supabase.co',
-    anonKey: 'sb_publishable_plGETjmTGoEtsgLJE6RV6w_Bky9mZQ1',
+    publishableKey: 'sb_publishable_plGETjmTGoEtsgLJE6RV6w_Bky9mZQ1',
   );
 
   runApp(const TesouApp());
