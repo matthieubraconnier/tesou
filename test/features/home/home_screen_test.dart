@@ -17,6 +17,17 @@ void main() {
     expect(find.text('Rassurer plutôt que surveiller.'), findsOneWidget);
   });
 
+  testWidgets('Je suis là enregistre un signe immédiatement', (tester) async {
+    await tester.pumpWidget(const TesouApp());
+
+    expect(find.text('Donner un signe à mes proches'), findsOneWidget);
+    await tester.tap(find.widgetWithText(FilledButton, 'Je suis là'));
+    await tester.pump();
+
+    expect(find.text('Signalé à l’instant'), findsOneWidget);
+    expect(find.text('C’est envoyé : tu es là.'), findsOneWidget);
+  });
+
   testWidgets('annonce une fonction à venir au clic', (tester) async {
     await tester.pumpWidget(const TesouApp());
 
