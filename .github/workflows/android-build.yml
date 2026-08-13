@@ -32,7 +32,9 @@ jobs:
         run: flutter --version
 
       - name: Generate Android platform files
-        run: flutter create --platforms=android --org fr.tesou .
+        run: |
+          flutter create --platforms=android --org fr.tesou .
+          rm -f test/widget_test.dart
 
       - name: Install dependencies
         run: flutter pub get
